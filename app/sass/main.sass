@@ -1,0 +1,553 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+::placeholder
+	color: #007ACC
+
+::selection
+	background-color: $accent
+	color: #fff
+
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	overflow: hidden
+	color: $text
+	background: #EBEBEB
+	input, textarea
+		border: rgba(255, 255, 255, 0.1) 1px solid
+		outline: none
+		&:focus:required:invalid
+			border-color: red
+		&:required:valid
+			border-color: green
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+	&.img-width
+		width: 100%
+
+.text-center
+	text-align: center
+
+b, strong
+	font-weight: bold
+
+.block-code
+	width: 72%
+	height: 1400px
+	position: absolute
+	z-index: 1
+	padding: 10px
+	left: 8%
+	top: 10%
+	transform: skew(18deg, -18deg)
+
+.code
+	width: 100%
+	display: flex
+	flex-flow: column wrap
+	justify-content: space-between
+	
+.code-content
+	width: 100%
+	display: flex
+	justify-content: center
+	font-size: 37px
+	
+.content
+	width: 100%
+	background: rgba(255, 255, 255, 0.7)
+	margin-top: 80px
+	margin-bottom: 80px
+	position: relative
+	z-index: 100
+
+.code-blue 
+	color: $code-blue
+.code-red
+	color: $code-red
+.code-green
+	color: $code-green
+	
+.container__left
+	width: 100%
+	margin-bottom: 150px
+
+.container__right
+	margin-top: 30px
+	width: 100%
+
+.foto
+	width: 100%
+
+.foto__block
+	width: 100% 
+	height: 350px
+	display: flex
+	justify-content: center
+	align-items: center
+	// padding: 90px 0px 90px 0px
+	background-color: #fff
+	color: #075D8C
+	font-size: 150px
+	position: relative
+	img 
+		width: 100%
+		height: 100%
+		margin-top: -5px
+		position: absolute
+		// display: none
+
+.switcer-close
+	display: flex
+	justify-content: space-between
+	align-items: center
+	background-color: #fff
+
+.close
+	font-size: 24px
+	color: #868686
+	display: none
+	&:hover
+		color: #000000
+
+.close__two
+	font-size: 24px
+	color: #272727
+	display: none
+	&:hover
+		color: #000000
+
+
+.switcher
+	width: 100%
+	h3 
+		color: #034A72
+	strong 
+		color: #9F2100
+
+////////// Checkbox ///////////////////////////////
+
+.checkbox
+	cursor: pointer
+	input
+		display: none
+		&:checked + .box
+			background-color: #A32100
+			&:after
+				left: 60px - 25px - 1px
+	.box
+		position: relative
+		display: block
+		float: left
+		width: 60px
+		height: 25px
+		background-color: #034A72
+		border-radius: 50px
+		transition: background-color 0.3s ease-in-out
+		box-shadow: inset 0 0 10px 2px rgba(0,0,0,0.4)
+		&:after
+			content: ""
+			position: absolute
+			width: 25px
+			height: 96%
+			background-color: #fff
+			border-radius: 50%
+			left: 1px
+			top: 2%
+			transition: left 0.2s ease-in-out
+			box-shadow: inset 5px -5px 10px 5px rgba(0,0,0,0.2),0 0 1px 1px rgba(0,0,0,.3)
+
+.switcher-info
+	width: 100%
+	display: flex
+	justify-content: space-between
+	align-items: center
+
+.info-block
+	height: 30px
+
+.theme-button
+	height: 30px
+		
+.theme-icon
+	color: #034A72
+	font-size: 18px
+	&:hover
+		color: #075D8C
+		cursor: pointer
+
+.switcher-button
+	display: flex
+	justify-content: space-between
+	align-items: center
+									
+
+////////////////////////////////////////////////////////////////////////////////////
+
+.name
+	max-width: 100%
+	height: auto
+	background-color: #034a72
+	color: #ffffff
+	font-size: 30px
+	text-align: center
+	padding-top: 15px
+	padding-bottom: 15px
+
+.profesion
+	background-color: #075d8c
+	
+.profesion-info
+	width: 100%
+	height: auto
+	color: #ffffff
+	padding-top: 5px
+	padding-bottom: 5px
+	font-size: 20px
+	display: flex
+	justify-content: center
+	align-items: center
+	
+
+.contact__block
+	max-width: 100%
+	height: auto
+	background-color: #034a72
+	color: #ffffff
+	text-align: center
+	padding-top: 15px
+	padding-bottom: 15px
+	h3 
+		margin-top: 10px
+	p 
+		font-size: 14px
+	i 
+		font-size: 22px
+	a 
+		color: #ffffff
+		margin: 5px
+		&:hover
+			color: #D8D8D8
+
+.contact__button
+	width: 100%
+	height: 40px
+	display: flex
+	justify-content: center
+	align-items: center
+	a 
+		width: 180px
+		height: 40px
+		// display: block
+		display: flex
+		justify-content: center
+		align-items: center
+		font-size: 11px
+		background-color: #075D8C
+		border-radius: 5px
+		&:hover
+			background-color: #034A72
+			border: 1px dashed #ffffff
+			cursor: pointer
+			text-decoration: none
+
+.languages
+	max-width: 100%
+	height: auto
+	background-color: #075d8c
+	color: #ffffff
+	padding: 15px
+
+.languages__skill
+	max-width: 100%
+	height: auto
+	background-color: #034a72
+	color: #ffffff
+	text-align: center
+	padding-top: 15px
+	padding-bottom: 15px
+
+.download
+	max-width: 100%
+	height: auto
+	background-color: #075d8c
+	color: #ffffff
+	padding: 15px
+
+.download__button
+	max-width: 100%
+	height: auto
+	background-color: #034a72
+	color: #ffffff
+	text-align: center
+	padding-top: 15px
+	padding-bottom: 15px
+	text-align: center
+	h5 
+		font-size: 18px
+	a 
+		color: #ffffff		
+	i 
+		font-size: 25px
+		&:hover
+			color: #DDDDDD
+
+.container__right
+	width: 100%
+	height: auto
+
+.paragraph
+	padding-left: 20px
+	
+.about__me
+	max-width: 100%
+	height: auto
+	padding: 20px
+	z-index: 2
+
+.target
+	max-width: 100%
+	height: auto
+	padding: 20px
+
+.profesionals__skils
+	max-width: 100%
+	height: auto
+	padding: 20px
+
+.experience
+	max-width: 100%
+	height: auto
+	padding: 20px
+
+.portfolio
+	padding: 20px
+
+
+.functional__responsibilities
+	max-width: 100%
+	padding: 20px
+
+.education
+	max-width: 100%
+	height: auto
+	padding: 20px
+
+.work__link
+	color: #075D8C
+	&:hover
+		color: #9F2100
+		text-decoration: none
+		
+.personal__qualities
+	max-width: 100%
+	height: auto
+	padding: 20px
+	
+// modal 
+
+.overlay
+  position: absolute
+  z-index: 1000
+  width: 100%
+  height: 100vh
+  position: fixed
+  top: 0
+  left: 0
+  bottom: 0
+  background-color: rgba(0, 0, 0, 0.8)
+  display: none
+
+.popup
+  position: absolute
+  z-index: 100
+  width: 450px
+  left: 50%
+  top: 50%
+  position: fixed
+  transform: translate(-50%, -50%)
+  padding: 40px
+  box-sizing: border-box
+  background-color: #fff
+  color: #000
+  input 
+	  margin-bottom: 10px
+input
+  width: 95%
+  height: 30px
+  padding-left: 10px
+  margin-bottom: 25px
+  background-color: #EBEBEB
+  border-radius: 5px
+  border: none
+  color: #1A1A1A
+  font-size: 14px
+  box-shadow: inset 0px 0px 1.5px 0px #767676
+
+textarea 
+  width: 95%
+  height: 100px
+  background-color: #EBEBEB
+  border-radius: 5px
+  border: none
+  padding-left: 10px
+  color: #1A1A1A
+  resize: none
+  font-size: 14px
+  box-shadow: inset 0px 0px 1.5px 0px #767676
+button 
+	width: 130px
+	height: 40px
+	border-radius: 5px
+	border: none
+	color: #ffffff
+	background-color: #007ACC
+	margin-bottom: 20px
+	&:hover
+  	background-color: #0062A3
+	cursor: pointer
+
+.text
+	height: 85px
+  
+.close-popup
+  position: absolute
+  top: 15px
+  right: 15px
+  width: 23px
+  height: 23px
+  cursor: pointer
+  &:before
+    content: ''
+    background-color: #007ACC
+    position: absolute
+    height: 1px
+    width: 31px
+    top: 11px
+    left: -4px
+    transform: rotate(-45deg)
+  &:after
+    content: ''
+    background-color: #007ACC
+    position: absolute
+    height: 1px
+    width: 31px
+    top: 11px
+    transform: rotate(45deg)
+    left: -4px
+
+// my custome input file
+
+.box 
+	width: 100%
+	margin-top: 15px
+	display: flex
+	justify-content: space-between
+	align-items: flex-start
+
+.box-buuton
+	height: 40px
+
+.box-file
+	width: 80%
+	height: 40px
+	display: flex
+	align-items: center
+	color: #007ACC
+	border: none
+	&:hover
+		color: #005994
+	span 
+		font-size: 13px
+
+// my custome input file
+
+.inputfile
+  width: 0.1px
+  height: 0.1px
+  opacity: 0
+  overflow: hidden
+  position: absolute
+  z-index: -1
+
+.inputfile + label
+  max-width: 80%
+  font-size: 1.25rem
+  font-weight: 700
+  text-overflow: ellipsis
+  white-space: nowrap
+  cursor: pointer
+  display: inline-block
+  overflow: hidden
+  padding: 0.625rem 1.25rem
+
+.no-js .inputfile + label
+  display: none
+
+// My porfolio block
+
+.block 
+	width: 100%
+
+.block__item
+  margin: 0px 0px 20px 0px 
+
+.block__one,.block__two,.block__three
+	border-bottom: 1px dashed #000000
+  
+.block__title
+  height: 40px
+  display: flex
+  align-items: center
+  letter-spacing: 2px
+  position: relative
+  padding: 0px 0px 0px 30px
+  cursor: pointer
+
+  &:before, &:after
+    content: ''
+    width: 10px
+    height: 1.1px
+    background-color: #196289
+    position: absolute
+    top: 16px
+    transition: all 0.3s ease 0s
+
+  &:before
+    transform: rotate(40deg)
+    left: 0px
+
+  &:after
+    transform: rotate(-40deg)
+    left: 8px
+
+  &.active
+    &:before, &:after
+      background-color: #E73925
+
+    &:before
+      transform: rotate(-40deg)
+
+    &:after
+      transform: rotate(40deg)
+
+.block__text
+  display: none
+  height: 120px
+  overflow: auto
+  overflow-x: hidden
+  z-index: 0
+  padding: 10px 0px 0px 20px
+
+
+
+@import "media" // Always at the end

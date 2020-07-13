@@ -1,0 +1,48 @@
+.block__item{
+  margin: 0px 0px 20px 0px;
+}
+.block__title{
+  letter-spacing: 2px;
+  position: relative;
+  padding: 0px 0px 0px 30px;
+  border-bottom: 1px dashed #000000;
+  cursor: pointer;
+}
+.block__title:before,
+.block__title:after{
+  content: '';
+  width: 10px;
+  height: 1px;
+  background-color: black;
+  position: absolute;
+  top: 8px;
+  transition: all 0.3s ease 0s;
+}
+
+.block__title:before{
+  transform: rotate(40deg);
+  left: 0px;
+}
+.block__title:after{
+  transform: rotate(-40deg);
+  left: 8px;
+}
+
+.block__title.active:before,
+.block__title.active:after{
+  background-color: #034A72;
+  border-bottom: 1px dashed #034A72;
+}
+.block__title.active:before{
+  transform: rotate(-40deg);
+}
+.block__title.active:after{
+  transform: rotate(40deg);
+}
+
+.block__text{
+  display: none;
+  padding: 10px 0px 0px 45px;
+}
+
+
