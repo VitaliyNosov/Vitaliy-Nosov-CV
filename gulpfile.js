@@ -46,13 +46,13 @@ gulp.task('scripts', function() {
 	return gulp.src([
 		'app/libs/jquery/dist/jquery.min.js',
 		'app/libs/fontawesome/fontawesome.js',
-		'app/libs/accardion.js/accardion.js',
-		'app/libs/custom-file-input.js/custom-file-input.js',
-		'app/libs/email.js/email.js',
-		'app/libs/overlayScrollbars.js/jquery.overlayScrollbars.min.js',
-		'app/libs/theme.js/theme.js',
-		'app/libs/translate.js/translate.js',
-		'app/libs/typed.js/typed.min.js',
+		'app/libs/accardion/accardion.js',
+		'app/libs/custom-file-input/custom-file-input.js',
+		'app/libs/email/email.js',
+		'app/libs/overlayScrollbars/jquery.overlayScrollbars.min.js',
+		'app/libs/theme/theme.js',
+		'app/libs/translate/translate.js',
+		'app/libs/typed/typed.min.js',
 		'app/js/common.js', // Always at the end
 		])
 	.pipe(concat('scripts.min.js'))
