@@ -78,7 +78,7 @@ var dict = {
         'Contact': 'Контакты :',
         'Social- Network': 'Социальные сети :',
         'languages': 'Языки :',
-        'English': 'Англисский',
+        'English': 'Английский',
         'Ru': 'Русский',
         'Ukr': 'Украинский',
         'Download': 'Скачать :',
