@@ -1,6 +1,6 @@
 var dict = {
     en: {
-        'SITE-TITLE':'My name is Vitali, I am developing web sites and web presentations and other products.',
+        'SITE-TITLE':'My name is Vitaliy. I am engaged in the development of sites on cms WordPress.',
         'Purpose':'Purpose:',
         'Purse-Text':'Getting a position of a web developer.',
         'Professional-Skills':'Professional skills:',
@@ -45,7 +45,7 @@ var dict = {
 
     },
     ru: {
-        'SITE-TITLE':'Меня зовут Виталий я занимаю разработкой веб-сайтов и веб-преложений и других продуктов.',
+        'SITE-TITLE':'Меня зовут Виталий я занимаюсь разработкой веб-сайтов на cms WordPress.',
         'Purpose':'Цель:',
         'Purse-Text':'Получение должности веб-разработчика.',
         'Professional-Skills':'Профессиональные навыки:',

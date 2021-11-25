@@ -223,7 +223,7 @@ b, strong
 .contact__block
 	max-width: 100%
 	height: auto
-	background-color: #034a72
+	background-color: #034a72 
 	color: #ffffff
 	text-align: center
 	padding-top: 15px
@@ -233,13 +233,14 @@ b, strong
 	p 
 		font-size: 14px
 	i 
-		font-size: 22px
+		font-size: 22px 
 	a 
 		color: #ffffff
 		margin: 5px
 		&:hover
 			color: #D8D8D8
 			text-decoration: none
+
 
 .contact__button
 	width: 100%
@@ -248,21 +249,65 @@ b, strong
 	justify-content: center
 	align-items: center
 	margin-top: 20px
-	a 
-		width: 180px
-		height: 40px
-		// display: block
-		display: flex
-		justify-content: center
-		align-items: center
-		font-size: 11px
-		background-color: #075D8C
-		border-radius: 5px
-		&:hover
-			background-color: #034A72
-			border: 1px dashed #ffffff
-			cursor: pointer
-			text-decoration: none
+	// a 
+	// 	width: 180px
+	// 	height: 40px
+	// 	display: flex
+	// 	justify-content: center
+	// 	align-items: center
+	// 	font-size: 11px
+	// 	background-color: #075D8C
+	// 	border-radius: 5px
+	// 	&:hover
+	// 		background-color: #034A72
+	// 		width: 180px
+	// 		height: 40px
+	// 		border: 1px dashed #ffffff
+	// 		cursor: pointer
+	// 		text-decoration: none
+
+.animated-btn 
+	position: relative 
+	min-height: 40px 
+	min-width: 180px 
+	display: inline-flex 
+	align-items: center 
+	justify-content: center 
+	background-color: #075D8C
+	border: none 
+	border-radius: 10px 
+	color: white 
+	font-weight: bold 
+	text-decoration: none 
+	font-size: 12px
+	transition: 0.5s
+	&:hover
+		background-color: #034A72
+		.inner-dashed-border
+    		animation-play-state: running 
+	  
+
+.inner-dashed-border 
+	position: absolute 
+	left: 0 
+	top: 0 
+	width: 100% 
+	height: 100% 
+	pointer-events: none 
+	animation: dashed_border_running 30s linear infinite both 
+	animation-play-state: paused 
+	stroke-width: 1.5
+	stroke-dasharray: 3,5 
+	stroke-dashoffset: 0 
+	stroke-linecap: round 
+	fill: none 
+	transition: 0.4s 
+	stroke: #ffffff 
+	z-index: 20 
+
+@keyframes dashed_border_running 
+			100% 
+        stroke-dashoffset: -1000 
 
 .languages
 	max-width: 100%
