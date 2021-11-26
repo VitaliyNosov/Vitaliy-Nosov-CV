@@ -27,6 +27,27 @@ body
 		&:required:valid
 			border-color: green
 
+.wordpress-name
+	position: relative
+
+.wordpress-link
+	position: absolute
+	top: -45%
+	right: -5%
+	font-size: 14px
+	color: #086CA1
+	border-radius: 50px
+	animation: icon 4s infinite alternate
+
+
+@keyframes icon
+	0%
+		transform: rotate(-40deg)
+	100%
+		transform: rotate(40deg)
+  
+
+
 .img-responsive
 	display: block
 	max-width: 100%
