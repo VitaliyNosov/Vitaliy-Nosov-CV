@@ -2,20 +2,18 @@ var syntax         = 'sass', // Syntax: sass or scss;
 		gulpVersion    = '4'; // Gulp version: 3 or 4
 		gmWatch        = false; // ON/OFF GraphicsMagick watching "img/_src" folder (true/false). Linux install gm: sudo apt update; sudo apt install graphicsmagick
 
-var gulp          = require('gulp'),
-		gutil         = require('gulp-util' ),
-		sass          = require('gulp-sass'),
+var gulp          = require('gulp')
+		sass          =  require('gulp-sass')(require('sass')),
 		browserSync   = require('browser-sync'),
 		concat        = require('gulp-concat'),
-		uglify        = require('gulp-uglify'),
+		uglify        = require('gulp-uglify-es').default,
 		cleancss      = require('gulp-clean-css'),
 		rename        = require('gulp-rename'),
 		autoprefixer  = require('gulp-autoprefixer'),
 		notify        = require('gulp-notify'),
 		rsync         = require('gulp-rsync'),
 		imageResize   = require('gulp-image-resize'),
-		imagemin      = require('gulp-imagemin'),
-		del           = require('del');
+		clean         = require('gulp-clean');
 
 // Local Server
 gulp.task('browser-sync', function() {
@@ -26,7 +24,7 @@ gulp.task('browser-sync', function() {
 		notify: false,
 		// open: false,
 		// online: false, // Work Offline Without Internet Connection
-		tunnel: true, tunnel: "projectname", // Demonstration page: `http://projectname.localtunnel.me`
+		// tunnel: true, tunnel: "projectname", // Demonstration page: http://projectname.localtunnel.me
 	})
 });
 
@@ -58,9 +56,26 @@ gulp.task('scripts', function() {
 		'app/libs/preloader/preloader.js',
 		])
 	.pipe(concat('scripts.min.js'))
-	// .pipe(uglify()) // Mifify js (opt.)
+	// .pipe(uglify({ output: { comments: false } }))
 	.pipe(gulp.dest('app/js'))
-	.pipe(browserSync.reload({ stream: true }))
+	.pipe(browserSync.stream())
+});
+
+// Images @x1 & @x2 + Compression | Required graphicsmagick (sudo apt update; sudo apt install graphicsmagick)
+gulp.task('img1x', function() {
+	return gulp.src('app/img/_src/**/*.*')
+	.pipe(imageResize({ width: '50%' }))
+	.pipe(gulp.dest('app/img/@1x/'))
+});
+gulp.task('img2x', function() {
+	return gulp.src('app/img/_src/**/*.*')
+	.pipe(imageResize({ width: '100%' }))
+	.pipe(gulp.dest('app/img/@2x/'))
+});
+
+// Clean @*x IMG's
+gulp.task('cleanimg', function() {
+	return gulp.src('app/img/@*', {allowEmpty: true}).pipe(clean())
 });
 
 // HTML Live Reload
@@ -83,25 +98,6 @@ gulp.task('rsync', function() {
 		silent: false,
 		compress: true
 	}))
-});
-
-// Images @x1 & @x2 + Compression | Required graphicsmagick (sudo apt update; sudo apt install graphicsmagick)
-gulp.task('img1x', function() {
-	return gulp.src('app/img/_src/**/*.*')
-	.pipe(imageResize({ width: '50%' }))
-	.pipe(imagemin())
-	.pipe(gulp.dest('app/img/@1x/'))
-});
-gulp.task('img2x', function() {
-	return gulp.src('app/img/_src/**/*.*')
-	.pipe(imageResize({ width: '100%' }))
-	.pipe(imagemin())
-	.pipe(gulp.dest('app/img/@2x/'))
-});
-
-// Clean @*x IMG's
-gulp.task('cleanimg', function() {
-	return del(['app/img/@*'], { force:true })
 });
 
 // If Gulp Version 3

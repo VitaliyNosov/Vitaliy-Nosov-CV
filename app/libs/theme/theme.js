@@ -21,7 +21,7 @@ var theme = 0;
 			var popup = document.querySelector('.popup');
 			var block__one = document.querySelector('.block__one')
 			var block__two = document.querySelector('.block__two')
-			var block__three = document.querySelector('.block__three')
+			// var block__three = document.querySelector('.block__three')
 
 			icon.style.color = '#9F2100';
 			body.style.background = '#17212B';
@@ -40,7 +40,7 @@ var theme = 0;
 			popup.style.background = '#17212B';
 			block__one.style.borderBottom ='1px dashed #fff';
 			block__two.style.borderBottom ='1px dashed #fff';
-			block__three.style.borderBottom ='1px dashed #fff';
+			// block__three.style.borderBottom ='1px dashed #fff';
 
 			theme = 1;
 		}
@@ -62,7 +62,7 @@ var theme = 0;
 			var popup = document.querySelector('.popup');
 			var block__one = document.querySelector('.block__one')
 			var block__two = document.querySelector('.block__two')
-			var block__three = document.querySelector('.block__three')
+			// var block__three = document.querySelector('.block__three')
 
 
 			icon.style.color = '#034A72';
@@ -82,9 +82,10 @@ var theme = 0;
 			popup.style.background = '#fff';
 			block__one.style.borderBottom ='1px dashed #000000';
 			block__two.style.borderBottom ='1px dashed #000000';
-			block__three.style.borderBottom ='1px dashed #000000';
+			// block__three.style.borderBottom ='1px dashed #000000';
 			
 			theme = 0;
 		}
 
 	});
+
