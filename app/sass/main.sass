@@ -4278,3 +4278,106 @@ button
       width: 100%
       height: auto
       position: absolute
+
+// pulse button
+
+.pulse-button 
+  display: flex
+  flex-wrap: wrap
+  align-items: center
+  justify-content: center
+  width: 60px
+  height: 60px
+  border-radius: 40px
+  padding: 10px
+  border: none
+  background: #034A72 !important
+  box-shadow: 0 5px 35px rgba(0, 0, 0, 0.2)
+  position: fixed
+  bottom: 50px
+  right: 50px
+  cursor: pointer
+  outline: none
+  z-index: 100
+  color: #fff
+  text-decoration: none !important
+  font-size: 20px
+
+  &:hover .pulse-button__icon 
+    opacity: 0
+    visibility: hidden
+    position: absolute
+    transition: 0.3s
+    
+  &:hover .pulse-button__text 
+    transition: 0.3s
+    opacity: 1
+    visibility: visible
+    position: relative
+  
+  &__text 
+    display: block
+    width: 100%
+    height: 10px
+    font-family: 'Arial' !important
+    font-size: 10px !important
+    text-transform: capitalize !important
+    color: #fff
+    text-align: center !important
+    line-height: 1.2 !important
+    text-decoration: none !important
+    opacity: 0
+    visibility: hidden
+    position: absolute
+    transition: 0.3s
+    margin-top: 1px
+  
+  &__rings 
+    border: 1px solid #034A72
+    position: absolute
+    top: 0
+    left: 0
+    bottom: 0
+    right: 0
+    height: auto
+    width: auto
+    border-radius: 50%
+    animation-duration: 2s
+    animation-name: pulse_1
+    animation-iteration-count: infinite
+    z-index: -1
+    &:nth-child(2) 
+      animation-name: pulse_2
+  
+    &:nth-child(3) 
+      animation-name: pulse_3
+    
+  
+@keyframes pulse_1 
+  from 
+    opacity: 1
+    transform: scale(0.9, 0.9)
+  
+  to 
+    opacity: 0
+    transform: scale(1.3, 1.3)
+  
+@keyframes pulse_2 
+  from 
+    opacity: 1
+    transform: scale(0.8, 0.8)
+  
+  to 
+    opacity: 0
+    transform: scale(1.5, 1.5)
+  
+
+@keyframes pulse_3 
+  from 
+    opacity: 1
+    transform: scale(0.8, 0.8)
+  
+  to 
+    opacity: 0
+    transform: scale(1.7, 1.7)
+
