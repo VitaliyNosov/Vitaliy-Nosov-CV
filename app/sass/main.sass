@@ -9,7 +9,7 @@
   justify-content: center
   align-items: center
   width: 100%
-  background: linear-gradient(90deg, #034A72 50%, transparent 50%), linear-gradient(90deg, #034A72 50%, transparent 50%), linear-gradient(0deg, #034A72 50%, transparent 50%), linear-gradient(0deg, #034A72 50%, transparent 50%)
+  background: linear-gradient(90deg, #075D8C 50%, transparent 50%), linear-gradient(90deg, #075D8C 50%, transparent 50%), linear-gradient(0deg, #075D8C 50%, transparent 50%), linear-gradient(0deg, #075D8C 50%, transparent 50%)
   background-repeat: repeat-x, repeat-x, repeat-y, repeat-y
   background-size: 16px 2px, 16px 2px, 2px 16px, 2px 16px
   background-position: 0% 0%, 100% 100%, 0% 100%, 100% 0px
@@ -33,6 +33,9 @@ body
 
 main
   display: block
+
+.mobile-fhoto-block
+    display: none
 
 // style 29.09.2022 block 
   
@@ -3071,6 +3074,7 @@ body
   display: block
   max-width: 100%
   height: auto
+  // border: 1px solid red
 
   &.img-width
     width: 100%
@@ -3147,16 +3151,16 @@ b, strong
 .foto__block
   width: 100%
   height: 350px
-  display: -webkit-box
-  display: -ms-flexbox
-  display: flex
-  -webkit-box-pack: center
-  -ms-flex-pack: center
-  justify-content: center
-  -webkit-box-align: center
-  -ms-flex-align: center
-  align-items: center
-  background-color: #fff
+  // display: -webkit-box
+  // display: -ms-flexbox
+  // display: flex
+  // -webkit-box-pack: center
+  // -ms-flex-pack: center
+  // justify-content: center
+  // -webkit-box-align: center
+  // -ms-flex-align: center
+  // align-items: center
+  // background-color: #fff
   color: #075d8c
   font-size: 150px
   position: relative
@@ -3164,8 +3168,8 @@ b, strong
   img
     width: 100%
     height: auto
-    margin-top: -3%
-    position: absolute
+    margin-top: -2%
+    // position: absolute
 
 .switcer-close
   display: -webkit-box
@@ -3342,6 +3346,19 @@ b, strong
 
 .icon 
   display: flex
+  width: 20px
+  height: 20px
+  display: flex
+  justify-content: center
+  align-items: center
+  padding: 2.5px 
+  border-radius: 3px
+  background-color: #fff
+  &:hover
+    background-color: #EBEBEB
+  i 
+    color: #034A72
+    font-size: 12px !important
 
 .upwork-icon
   width: 20px
@@ -3961,7 +3978,7 @@ button
     -webkit-box-align: center
     -ms-flex-align: center
     align-items: center
-    background-color: #fff
+    // background-color: #fff
     color: #075d8c
     font-size: 150px
     position: relative
@@ -3969,7 +3986,7 @@ button
     img
       width: 100%
       height: 100%
-      position: absolute
+      // position: absolute
 
 @media (max-width: 991.98px)
   .block-code
@@ -4041,6 +4058,7 @@ button
       top: 22px
 
 @media (max-width: 767.98px)
+
   .block-code
     display: none
 
@@ -4064,10 +4082,59 @@ button
   .foto
     width: 100%
     height: auto
+    
 
   .foto__block
     margin-right: 10px
+    display: flex
     height: 500px
+    background-color: #034A72 !important
+    .desktop__photo 
+      display: none
+
+  .mobile-fhoto-block
+    width: 230px
+    height: 230px
+    display: flex
+    border-radius: 50%
+    justify-content: center
+    align-items: center
+    border: 5px  #fff dashed
+
+  .img-block-mob
+    width: 200px
+    height: 200px 
+    border-radius: 50% 
+    overflow: hidden 
+    display: flex 
+    justify-content: center 
+    align-items: center 
+    background-color: #fff
+    img
+        max-width: 100% 
+        height: 100%
+        margin-top: 5% 
+
+  .theme-icon
+    width: 30px
+    height: 30px
+    background-color: #fff
+    border-radius: 50%
+    display: flex
+    justify-content: center
+    align-items: center
+    // padding: 3px
+
+  .switcher
+    background-color: #034A72
+    padding: 3%
+
+  .switcher-button 
+    i 
+      color: #fff
+
+  .switcher__title
+    color: #fff !important
 
   .info-block, .theme-icon i
     font-size: 25px
@@ -4269,7 +4336,7 @@ button
     -webkit-box-align: center
     -ms-flex-align: center
     align-items: center
-    background-color: #fff
+    // background-color: #fff
     color: #075d8c
     font-size: 150px
     position: relative
@@ -4277,7 +4344,7 @@ button
     img
       width: 100%
       height: auto
-      position: absolute
+      // position: absolute
 
 // pulse button
 
