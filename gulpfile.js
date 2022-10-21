@@ -2,7 +2,7 @@ var syntax         = 'sass', // Syntax: sass or scss;
 		gulpVersion    = '4'; // Gulp version: 3 or 4
 		gmWatch        = false; // ON/OFF GraphicsMagick watching "img/_src" folder (true/false). Linux install gm: sudo apt update; sudo apt install graphicsmagick
 
-var gulp          = require('gulp')
+var gulp          = require('gulp'),
 		sass          =  require('gulp-sass')(require('sass')),
 		browserSync   = require('browser-sync'),
 		concat        = require('gulp-concat'),
@@ -21,10 +21,10 @@ gulp.task('browser-sync', function() {
 		server: {
 			baseDir: 'app'
 		},
-		notify: false,
-		// open: false,
-		// online: false, // Work Offline Without Internet Connection
-		// tunnel: true, tunnel: "projectname", // Demonstration page: http://projectname.localtunnel.me
+		notify: true,
+		open: true,
+		online: true, // Work Offline Without Internet Connection
+		tunnel: true, tunnel: "projectname", // Demonstration page: http://projectname.localtunnel.me
 	})
 });
 
