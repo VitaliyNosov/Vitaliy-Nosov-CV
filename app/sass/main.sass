@@ -16,11 +16,15 @@
   border-radius: 5px
   padding: 10px
   margin-bottom: 10px
-  animation: dash 5s linear infinite
+  animation: dash 10s linear infinite
 
 @keyframes dash
   to
     background-position: 100% 0%, 0% 100%, 0% 0%, 100% 100%
+
+
+  
+
 
 // preloader two
 
@@ -72,8 +76,11 @@ main
 
 .paragraph ul li 
   &:before
-    content: '\2666'
-    font-size: 20px 
+    // content: '\2666'
+    content: '\f00c'
+    font-family: "Font Awesome 5 Free" 
+    font-weight: 900
+    font-size: 12px 
     margin-right: 15px
     color: #075D8C
 	
@@ -3344,67 +3351,148 @@ b, strong
   justify-content: center
   align-items: center
 
-.icon 
-  display: flex
-  width: 25px
-  height: 25px
-  display: flex
-  justify-content: center
-  align-items: center
-  padding: 2.5px 
-  border-radius: 3px
-  background-color: #fff
-  &:hover
-    background-color: #EBEBEB
-  i 
+
+// social icons
+
+.social-icon-block
+    margin-top: 35px
+
+.wrapper-icons
+  display: inline-flex
+  a 
+    text-decoration: none
+    color: #004776
+    width: 20px
+    height: 20px
+    &:hover 
+        color: #fff
+    i 
+      font-size: 14px
+
+  .icon
+    position: relative
+    background-color: #ffffff
     color: #034A72
-    font-size: 14px !important
+    border-radius: 10%
+    padding: 4px 
+    margin: 7px
+    width: 25px
+    height: 25px
+    font-size: 16px
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1)
+    cursor: pointer
+    transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55)
 
-.upwork-icon
-  width: 25px
-  height: 25px
-  display: flex
-  justify-content: center
-  align-items: center
-  padding: 2px 
-  border-radius: 3px
-  background-color: #fff
-  &:hover
-    background-color: #EBEBEB
-    
+  .tooltip
+    position: absolute
+    top: 0
+    font-size: 14px
+    background-color: #ffffff
+    color: #ffffff
+    padding: 5px 8px
+    border-radius: 5px
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1)
+    opacity: 0
+    pointer-events: none
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55)
 
-.linkedin
-  transition: 0.3s
-  &:hover 
-    background: #0A66C2 !important
-    i
-      transition: 0.3s
-      color: #fff
+    &::before
+      position: absolute
+      content: ""
+      height: 8px
+      width: 8px
+      background-color: #ffffff
+      bottom: -3px
+      left: 50%
+      transform: translate(-50%) rotate(45deg)
+      transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55)
 
-.github
-  transition: 0.3s
-  &:hover 
-    background: #24292F !important
-    i
-      transition: 0.3s
-      color: #fff
+  .icon:hover
+    .tooltip
+      top: -45px
+      opacity: 1
+      visibility: visible
+      pointer-events: auto
 
-.twitter
-  transition: 0.3s
-  &:hover 
-    background: #1D9BF0 !important
-    i
-      transition: 0.3s
-      color: #fff
+    span, .tooltip
+      text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1)
 
-.upwork
-  transition: 0.3s
-  &:hover 
-    background: #00AB01 !important
-  &:hover path 
-    fill: #fff
+  .Github:hover
+    background-color: #0A66C2
+    color: #ffffff
+    a
+        color: #fff
+
+    .tooltip
+      background-color: #0A66C2
+      color: #ffffff
+
+      &::before
+        background-color: #0A66C2
+        color: #ffffff
+
+  .Twitch:hover
+    background-color: #161B22
+    color: #ffffff
+    a
+        color: #fff
+
+    .tooltip
+      background-color: #161B22
+      color: #ffffff
+
+      &::before
+        background-color: #161B22
+        color: #ffffff
+
+  .instagram:hover
+    background-color: #1D9BF0
+    color: #ffffff
+    a
+        color: #fff
+
+    .tooltip
+      background-color: #1D9BF0
+      color: #ffffff
+
+      &::before
+        background-color: #1D9BF0
+        color: #ffffff
+
+  .youtube span
+    margin-top: 5px
+
+  .youtube:hover
+    background-color: #14A800
+    color: #ffffff
+    &:hover path 
+        fill: #fff
+    a
+        color: #fff
+
+    .tooltip
+      background-color: #14A800
+      color: #ffffff
+
+      &::before
+        background-color: #14A800
+        color: #ffffff
+
+// social icons
 
 
+// mobile block fhoto-icons
+
+.mobile-block
+    display: none
+
+
+
+// mobile block fhoto-icons
 
 .contact__button
   width: 100%
@@ -4118,7 +4206,7 @@ button
   .foto__block
     margin-right: 10px
     display: flex
-    height: 500px
+    // height: 500px
     background-color: #034A72 !important
     .desktop__photo 
       display: none
@@ -4194,14 +4282,19 @@ button
       color: #000
 
   .name
-    font-size: 45px
+    font-size: 35px
 
   .profesion-info
     padding: 0 25px 0 25px
     font-size: 26px
 
-  .contact__block
-    font-size: 30px
+  .contact__block 
+    h3
+      font-size: 20px 
+    p 
+      font-size: 16px !important
+    a 
+      font-size: 16px
 
     p, i
       font-size: 30px
@@ -4212,7 +4305,7 @@ button
     font-size: 20px
 
   .languages, .languages__skill p, .download, .download__button h5
-    font-size: 30px
+    font-size: 20px
 
   .container__right
     display: none
@@ -4270,11 +4363,59 @@ button
       top: 28px
 
 @media (max-width: 575.98px)
+
+
+  .mobile-block
+    width: 210px
+    height: 210px
+    display: flex
+    justify-content: center
+    align-items: center
+    border-radius: 50%
+    background-color: #fff
+
+  .border-mob
+    position: relative
+    border: 0
+    height: 200px
+    width: 200px
+    border-radius: 100%
+    display: flex
+    align-items: center
+    justify-content: center
+
+  .border-mob:before 
+    content: " "
+    position: absolute
+    left: 0
+    right: 0
+    top: 0
+    bottom: 0
+    border-radius: 100%
+    border: 3px dashed #004776
+    animation: rotate 60s linear infinite
+  
+  @keyframes rotate 
+    0%  
+      transform: rotate(0deg) 
+    100%  
+      transform: rotate(360deg) 
+    
+  .fhoto-block
+    height: 180px
+    width: 180px
+    border-radius: 100%
+    overflow: hidden
+    img 
+      margin-top: -40% 
+
+
+
   .block-code
     display: none
 
-  .content
-    width: 100%
+// .content
+//     width: 100%
 
   .foto
     width: 100%
