@@ -4108,6 +4108,10 @@ button
       // position: absolute
 
 @media (max-width: 991.98px)
+
+  .mobile-block
+    display: none
+    
   .block-code
     display: none
     display-border: 1px solid green
@@ -4177,6 +4181,50 @@ button
       top: 22px
 
 @media (max-width: 767.98px)
+
+  .mobile-block
+    width: 210px
+    height: 210px
+    display: flex
+    justify-content: center
+    align-items: center
+    border-radius: 50%
+    background-color: #fff
+
+  .border-mob
+    position: relative
+    border: 0
+    height: 200px
+    width: 200px
+    border-radius: 100%
+    display: flex
+    align-items: center
+    justify-content: center
+
+  .border-mob:before 
+    content: " "
+    position: absolute
+    left: 0
+    right: 0
+    top: 0
+    bottom: 0
+    border-radius: 100%
+    border: 3px dashed #004776
+    animation: rotate 60s linear infinite
+  
+  @keyframes rotate 
+    0%  
+      transform: rotate(0deg) 
+    100%  
+      transform: rotate(360deg) 
+    
+  .fhoto-block
+    height: 180px
+    width: 180px
+    border-radius: 100%
+    overflow: hidden
+    img 
+      margin-top: -52% 
 
   .block-code
     display: none
