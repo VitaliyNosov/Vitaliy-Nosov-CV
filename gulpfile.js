@@ -42,12 +42,13 @@ gulp.task('styles', function() {
 // JS
 gulp.task('scripts', function() {
 	return gulp.src([
+		'app/libs/axios/axios.min.js',
+		'app/libs/telegram-bot-form-script/telegram-bot-script.js',
 		'app/libs/jquery/dist/jquery.min.js',
 		'app/libs/GSAP/gsap.min.js',
 		'app/libs/fontawesome/fontawesome.js',
 		'app/libs/accardion/accardion.js',
 		'app/libs/custom-file-input/custom-file-input.js',
-		'app/libs/email/email.js',
 		'app/libs/overlayScrollbars/jquery.overlayScrollbars.min.js',
 		'app/libs/theme/theme.js',
 		'app/libs/translate/translate.js',

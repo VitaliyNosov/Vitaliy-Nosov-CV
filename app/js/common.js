@@ -149,8 +149,8 @@ gsap.to('.linePreloader', {
 	y: 0,
 	scale: 1
   })
-
-
+  
+  
 });
 
 
