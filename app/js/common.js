@@ -3,31 +3,82 @@ $(function () {
 
 //translator functions
 
-$.html5Translate = function (dict, lang) {
+// $.html5Translate = function (dict, lang) {
 
-	$('[data-translate-key]').each(function () {
-		$(this).html(dict[lang][$(this).data('translateKey')]);
-	});
+// 	$('[data-translate-key]').each(function () {
+// 		$(this).html(dict[lang][$(this).data('translateKey')]);
+// 	});
 
-};
+// };
 
 	
-		var translate = 0;
+// 		var translate = 0;
 
-		$('#btn').on('click', function () {
-			if (translate == 0) {
-				$.html5Translate(dict, 'en');
+// 		$('#btn').on('click', function () {
+// 			if (translate == 0) {
+// 				$.html5Translate(dict, 'en');
 
-				translate = 1;
-			}
-			else {
-				$.html5Translate(dict, 'ru');
+// 				translate = 1;
+// 			}
+// 			else {
+// 				$.html5Translate(dict, 'ru');
 
 
-				translate = 0;
-			}
-		});
+// 				translate = 0;
+// 			}
+// 		});
 
+
+// Функция для перевода страницы
+
+$.html5Translate = function (dict, lang) {
+    $('[data-translate-key]').each(function () {
+        $(this).html(dict[lang][$(this).data('translateKey')]);
+    });
+};
+
+// Устанавливаем начальный язык и состояние кнопки
+
+let translate;
+
+// Функция для автоматической установки языка и состояния кнопки
+
+function setLanguageByBrowserSettings() {
+
+    // Получаем язык браузера
+
+    const browserLang = navigator.language || navigator.userLanguage;
+
+    // Проверяем, является ли язык русским
+
+    if (browserLang.startsWith('ru')) {
+        $.html5Translate(dict, 'ru');
+        translate = 0; // русский
+        $('#btn').prop('checked', false); // Чекбокс не нажат
+    } else {
+        $.html5Translate(dict, 'en');
+        translate = 1; // английский
+        $('#btn').prop('checked', true); // Чекбокс нажат
+    }
+}
+
+// Переключение языка при изменении состояния чекбокса
+
+$('#btn').on('change', function () {
+    if ($(this).is(':checked')) {
+        $.html5Translate(dict, 'en');
+        translate = 1;
+    } else {
+        $.html5Translate(dict, 'ru');
+        translate = 0;
+    }
+});
+
+// Вызов функции для автоматической установки языка при загрузке страницы
+
+$(document).ready(function () {
+    setLanguageByBrowserSettings();
+});
 
 
 
