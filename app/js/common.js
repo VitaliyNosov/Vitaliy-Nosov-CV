@@ -3,23 +3,13 @@ $(function () {
 
 // custom color border   
 
-  let isClass123Added = false;
-
-  function toggleClass123() {
-    if (isClass123Added) {
-      $('.mobile-color-mob').removeClass('mob-mod');
-      console.log('Класс mob-mod удален');
-    } else {
-      $('.mobile-color-mob').addClass('mob-mod');
-      console.log('Класс mob-mod добавлен');
-    }
-    isClass123Added = !isClass123Added; // Переключаем состояние
-  }
-
-  $('#block1, #block2').on('click', function() {
-    toggleClass123();
-  });
-
+$('#block1').click(function() {
+    $('.mobile-color-mob').removeClass('mobile-color-mob');
+});
+    
+$('#block2').click(function() {
+  $('.mob-mod').addClass('mobile-color-mob'); // Замените #target-element на нужный селектор
+});
 
 // translator functions
 
