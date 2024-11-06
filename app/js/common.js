@@ -1,35 +1,27 @@
+
 $(function () {
 
+// custom color border   
 
-//translator functions
+  let isClass123Added = false;
 
-// $.html5Translate = function (dict, lang) {
+  function toggleClass123() {
+    if (isClass123Added) {
+      $('.mobile-color-mob').removeClass('mob-mod');
+      console.log('Класс mob-mod удален');
+    } else {
+      $('.mobile-color-mob').addClass('mob-mod');
+      console.log('Класс mob-mod добавлен');
+    }
+    isClass123Added = !isClass123Added; // Переключаем состояние
+  }
 
-// 	$('[data-translate-key]').each(function () {
-// 		$(this).html(dict[lang][$(this).data('translateKey')]);
-// 	});
-
-// };
-
-	
-// 		var translate = 0;
-
-// 		$('#btn').on('click', function () {
-// 			if (translate == 0) {
-// 				$.html5Translate(dict, 'en');
-
-// 				translate = 1;
-// 			}
-// 			else {
-// 				$.html5Translate(dict, 'ru');
+  $('#block1, #block2').on('click', function() {
+    toggleClass123();
+  });
 
 
-// 				translate = 0;
-// 			}
-// 		});
-
-
-// Функция для перевода страницы
+// translator functions
 
 $.html5Translate = function (dict, lang) {
     $('[data-translate-key]').each(function () {
@@ -123,7 +115,6 @@ $('.js-button-campaign').click(function () {
 
 // my typed js
 
-
 	var typed = new Typed(".hero-typed-text", {
 		strings: ["var mySrc = myImage.getAttribute('src');</br>\ if(mySrc === 'images/firefox-icon.png')</br> \
       \myImage.setAttribute('src','img/i.png');</br> \ } </br>else {</br> \ myImage.setAttribute('src','img/i.png');</br>\
@@ -141,19 +132,19 @@ $('.js-button-campaign').click(function () {
 
 // my body scrolbar
 
-$(function () {
-	//The passed argument has to be at least a empty object or a object with your desired options
-	$("body").overlayScrollbars({
-		sizeAutoCapable: false,
-		resize: "vertical"
-	});
-});
+// $(function () {
+// 	//The passed argument has to be at least a empty object or a object with your desired options
+// 	$("body").overlayScrollbars({
+// 		sizeAutoCapable: false,
+// 		resize: "vertical"
+// 	});
+// });
 
-$('.block__text').overlayScrollbars({
-    sizeAutoCapable: false,
-    resize: "vertical"
+// $('.block__text').overlayScrollbars({
+//     sizeAutoCapable: false,
+//     resize: "vertical"
     
-});
+// });
 
 // GSAP preloader
 

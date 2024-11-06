@@ -49,7 +49,7 @@ gulp.task('scripts', function() {
 		'app/libs/fontawesome/fontawesome.js',
 		'app/libs/accardion/accardion.js',
 		'app/libs/custom-file-input/custom-file-input.js',
-		'app/libs/overlayScrollbars/jquery.overlayScrollbars.min.js',
+		// 'app/libs/overlayScrollbars/jquery.overlayScrollbars.min.js',
 		'app/libs/theme/theme.js',
 		'app/libs/translate/translate.js',
 		'app/libs/typed/typed.min.js',

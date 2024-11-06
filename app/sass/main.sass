@@ -1,6 +1,31 @@
 @import url(https://fonts.googleapis.com/css?family=Inconsolata:200,300,regular,500,600,700,800,900)
 
 
+// Стили для Firefox
+=firefox-scrollbar
+  scrollbar-width: thin
+  scrollbar-color: #034A72 #FFFBF5
+
+// Chrome, Edge и Safari
+=webkit-scrollbar
+  *::-webkit-scrollbar
+    width: 12px
+
+  *::-webkit-scrollbar-track
+    background: #FFFBF5
+
+  *::-webkit-scrollbar-thumb
+    background-color: #034A72
+    border-radius: 20px
+    border: 3px solid #FFFBF5
+
+// Применение стилей
+*
+  +firefox-scrollbar
+  +webkit-scrollbar
+
+
+
 // preloader two
 
 .border
@@ -21,9 +46,6 @@
 @keyframes dash
   to
     background-position: 100% 0%, 0% 100%, 0% 0%, 100% 100%
-
-
-  
 
 
 // preloader two
@@ -3034,7 +3056,7 @@ body
   position: relative
   line-height: 1.65
   font-family: roboto-example,sans-serif
-  overflow: hidden
+  // overflow: hidden
   color: #333
   background: #ebebeb
 
@@ -3190,7 +3212,7 @@ b, strong
   -webkit-box-align: center
   -ms-flex-align: center
   align-items: center
-  background-color: #fff
+  background-color: #FBFBFB
 
 .close
   font-size: 24px
@@ -4320,8 +4342,6 @@ button
   .box 
     border: 1px solid #CBCBCB
 
-  
-
   .info-block, .theme-icon i
     font-size: 25px
 
@@ -4422,9 +4442,14 @@ button
       position: absolute
       top: 28px
 
+@media (max-width: 620px)
+  .mobile-color-mob
+    background-color: #075D8C
+  .mob-mod
+    background-color: #fff !important
+
+
 @media (max-width: 575.98px)
-
-
   .mobile-block
     width: 210px
     height: 210px
