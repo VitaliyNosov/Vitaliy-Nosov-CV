@@ -43,6 +43,7 @@ gulp.task('styles', function() {
 gulp.task('scripts', function() {
 	return gulp.src([
 		'app/libs/axios/axios.min.js',
+		'app/libs/notyf/notyf.min.js',
 		'app/libs/telegram-bot-form-script/telegram-bot-script.js',
 		'app/libs/jquery/dist/jquery.min.js',
 		'app/libs/GSAP/gsap.min.js',
