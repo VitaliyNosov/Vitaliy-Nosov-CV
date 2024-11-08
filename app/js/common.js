@@ -24,8 +24,8 @@ $(function () {
   function setLanguageByBrowserSettings() {
       const browserLang = navigator.language || navigator.userLanguage;
 
-      if (browserLang.startsWith('ru')) {
-          $.html5Translate(dict, 'ru');
+      if (browserLang.startsWith('uk')) {
+          $.html5Translate(dict, 'uk');
           translate = 0;
           $('#btn').prop('checked', false);
       } else {
@@ -41,7 +41,7 @@ $(function () {
           $.html5Translate(dict, 'en');
           translate = 1;
       } else {
-          $.html5Translate(dict, 'ru');
+          $.html5Translate(dict, 'uk');
           translate = 0;
       }
   });
@@ -139,61 +139,3 @@ $(function () {
   });
 });
 
-
-// animation text gsap
-
- // Функция для разбивания текста на символы
- function splitText(element) {
-  const listItems = element.querySelectorAll("li");
-
-  listItems.forEach(li => {
-      const text = li.innerText;
-      const splitTextArray = text.split('');
-      li.innerHTML = ""; // Очищаем оригинальный текст
-
-      // Разбиваем текст на символы и оборачиваем каждый в тег .char
-      splitTextArray.forEach(char => {
-          const span = document.createElement("span");
-          span.classList.add("char");
-          span.textContent = char === " " ? "\u00A0" : char; // Неразрывный пробел
-          li.appendChild(span);
-      });
-  });
-}
-
-// Функция анимации символов
-function animateChars(element) {
-  gsap.to(element.querySelectorAll(".char"), {
-      opacity: 1,
-      x: 0,
-      y: 0,
-      rotation: 0,
-      scale: 1,
-      duration: 1.5,
-      ease: "power3.out",
-      stagger: 0.03 // Задержка между появлением букв
-  });
-}
-
-// Инициализация элементов с классом .texts
-document.querySelectorAll(".texts").forEach(element => {
-  splitText(element); // Разбиваем текст на буквы
-});
-
-// Обработчик прокрутки
-function handleScroll() {
-  document.querySelectorAll(".texts").forEach(element => {
-      const rect = element.getBoundingClientRect();
-      const windowHeight = window.innerHeight;
-
-      // Запускаем анимацию, если элемент в области видимости
-      if (rect.top < windowHeight * 0.8 && !element.classList.contains("animated")) {
-          animateChars(element);
-          element.classList.add("animated"); // Помечаем, что элемент анимирован
-      }
-  });
-}
-
-// Инициализируем проверку при прокрутке
-window.addEventListener("scroll", handleScroll);
-handleScroll(); // Запуск при загрузке страницы
