@@ -43,7 +43,7 @@ var dict = {
         'English':'English',
         'Ru':'Rusian',
         'Uk':'Ukranian',
-        'Download':'Download:',
+        'Download':'Download PDF:',
         'Email-Button':'Send',
         'Attach-File':'Attach file...'
 
@@ -94,7 +94,7 @@ var dict = {
         'English':'Англійська',
         'Ru':'Російська',
         'Uk':'Українська',
-        'Download':'Скачати',
+        'Download':'Завантажити PDF:',
         'Email-Button':'Відправити',
         'Attach-File':'Прикріпити файл...'
     }
