@@ -60,7 +60,7 @@ var dict = {
         'Experience-Content-two':'web-developer, лютий 2018 - грудень 2019.',
         'Experience-Content-three':'web-developer, Жовтень 2020 - теперішній час.',
         'Experience-Content-four':'wordpress-developer, червень 2022 - теперішній час.',
-        'Functional-Responsibilities':'Обовязки:',
+        "Functional-Responsibilities": "Обов'язки:",
         'Responsibilities-Text1':'Розробка та впровадження нових функцій і можливостей.',
         'Responsibilities-Text2':'Створення та супровід архітектури веб-сайту.',
 		'Responsibilities-Text3':'Забезпечення технічними аспектами CMS.',
