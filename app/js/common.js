@@ -51,18 +51,17 @@ $(function () {
         setLanguageByBrowserSettings();
     });
   
- 
-    if (window.innerWidth <= 620) { // Проверка на мобильное устройство (ширина экрана <= 768px)
-        $("#click-left").click(function () {
-            $("#container-left").hide(450);
-            $("#container-right").show(450);
-        });
+
+
+    $("#click-left").click(function () {
+        $("#container-left").hide(450);
+        $("#container-right").show(450);
+    });
     
-        $("#click-right").click(function () {
-            $("#container-left").show(450);
-            $("#container-right").hide(450);
-        });
-    }
+    $("#click-right").click(function () {
+        $("#container-left").show(450);
+        $("#container-right").hide(450);
+    });
     
   
     // modal popup 
