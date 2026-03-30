@@ -19,7 +19,7 @@ var theme = 0;
 			var input2 = document.querySelector('.inputTwo');
 			var input3 = document.querySelector('.textarea');
 			var popup = document.querySelector('.popup');
-			var block__one = document.querySelector('.block__one')
+			// var block__one = document.querySelector('.block__one')
 			var block__two = document.querySelector('.block__two')
 			// var block__three = document.querySelector('.block__three')
 
@@ -38,7 +38,7 @@ var theme = 0;
 			input2.style.color = '#007ACC';
 			input3.style.color = '#007ACC';
 			popup.style.background = '#17212B';
-			block__one.style.borderBottom ='1px dashed #fff';
+			// block__one.style.borderBottom ='1px dashed #fff';
 			block__two.style.borderBottom ='1px dashed #fff';
 			// block__three.style.borderBottom ='1px dashed #fff';
 
@@ -60,7 +60,7 @@ var theme = 0;
 			var input2 = document.querySelector('.inputTwo');
 			var input3 = document.querySelector('.textarea');
 			var popup = document.querySelector('.popup');
-			var block__one = document.querySelector('.block__one')
+			// var block__one = document.querySelector('.block__one')
 			var block__two = document.querySelector('.block__two')
 			// var block__three = document.querySelector('.block__three')
 
@@ -80,7 +80,7 @@ var theme = 0;
 			input2.style.color = '#1A1A1A';
 			input3.style.color = '#1A1A1A';
 			popup.style.background = '#fff';
-			block__one.style.borderBottom ='1px dashed #000000';
+			// block__one.style.borderBottom ='1px dashed #000000';
 			block__two.style.borderBottom ='1px dashed #000000';
 			// block__three.style.borderBottom ='1px dashed #000000';
 			
