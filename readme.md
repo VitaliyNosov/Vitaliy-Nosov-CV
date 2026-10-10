@@ -3,7 +3,7 @@
 A personal resume website built with HTML, CSS, and JavaScript, featuring a bilingual interface, a contact form, and downloadable PDF resumes.
 
 <p align="center">
-  <img src="/app/img/baner.png" alt="Resume Website Banner" width="100%">
+  <img src="/app/img/banner.png" alt="Resume Website Banner" width="100%">
 </p>
 
 ## Features
