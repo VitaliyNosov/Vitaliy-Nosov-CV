@@ -1,4 +1,4 @@
-const botToken = '6138840787:AAFMxqaoViiCF22tskdznuhhoLUlBy6cmBw';
+const botToken = '6138840787:AAGi0m3D8GuzKb7lq-p3XZohm4ctm7YBPSU';
 const chatId = '422713968';
 const feedbackForm = document.getElementById('feedbackForm');
 const notyf = new Notyf({
